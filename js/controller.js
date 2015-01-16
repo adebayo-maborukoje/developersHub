@@ -56,32 +56,18 @@ yearbookAPP.controller('homeCtrl', function ($scope, $http){
 //   };
 
 // yearbookAPP.controller('formController', function ($scope, $http, fileUpload){
-yearbookAPP.controller('formController', function ($scope, $http){
-
-  $scope.submit =  function (){
-     
+yearbookAPP.controller('formController', function ($scope, $http, $location){
+ $scope.submit = function (newUser) {
       $http({
           method: 'POST',
           url: urlBase,
-          data : $.param(
-            {
-                firstname: $scope.first_name,
-                lastname: $scope.last_name,
-                // email: $scope.email,
-                username: $scope.username,
-                nickname: $scope.nickname,
-                occupation:$scope.occupation,
-                organisation:$scope.organisation,
-                marital:$scope.marital,
-                graduation: $scope.graduation,
-                birthday: $scope.birthday,
-                mobile: $scope.mobile,
-                hobbies: $scope.hobbies
-                // bio: $scope.bio
-            }),
+          data : $.param(newUser),
           headers : {'Content-Type': 'application/x-www-form-urlencoded'}
-      }).success(function(){
 
+      }).success(function(){
+          console.log(newUser)
+          $scope.report="CREATED SUCCESSFULLY";
+          // $location.path('/repos');
         // console.log(birthday + graduation + firstname);
         // var file = $scope.fileToUpload;
         // var uploadUrl = 'https://andela-yearbook.herokuapp.com/yearBook/uploads';
@@ -89,21 +75,28 @@ yearbookAPP.controller('formController', function ($scope, $http){
        console.log("got here");
       }).error(function (err){
         console.log("error occurred here");
-        
+
       });
-  };
+ } 
 });
 
-yearbookAPP.controller('memberCtrl', function ($scope, $http, $routeParams){
+yearbookAPP.controller('memberCtrl', function ($scope, $http, $routeParams, $location){
   var query = $routeParams.username;
   console.log(urlBase+query);
   var url = urlBase+query;
-  $http.get(url).success(function(data){
+  $http.get(url).success(function(data, status){
+    if (status !== 200 || data.status === 404){
+         $location.path('/repos');
+        // console.log(status, data.status)
+    }else{
+  console.log(status);
   $scope.member = data;
   console.log($scope.member);
+
 // }).error(function (err, status){
 //   $scope.member = err;
 //   return;
+}
  });
 });
 
@@ -137,3 +130,26 @@ yearbookAPP.controller('memberCtrl', function ($scope, $http, $routeParams){
 //         });
 //     }
 // }]);
+
+// $scope.submit = function () {
+//       $http({
+//           method: 'POST',
+//           url: urlBase,
+//           data : $.param(
+//             {
+//                 firstname: $scope.first_name,
+//                 lastname: $scope.last_name,
+//                 email: $scope.email,
+//                 username: $scope.username,
+//                 nickname: $scope.nickname,
+//                 occupation:$scope.occupation,
+//                 organisation:$scope.organisation,
+//                 marital:$scope.marital,
+//                 graduation: $scope.graduation,
+//                 birthday: $scope.birthday,
+//                 mobile: $scope.mobile,
+//                 interest: $scope.hobbies,
+//                 bio: $scope.bio,
+                
+//             }),
+//           headers : {'Content-Type': 'application/x-www-form-urlencoded'}

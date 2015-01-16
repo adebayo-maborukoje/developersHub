@@ -1,5 +1,7 @@
+
+
 body {
-  background: url('../images/bg2.png') #525252;
+  background-color: #e2e2e2;
   margin:0 auto;
   color:#00004f;
 }
@@ -22,14 +24,14 @@ img {
   border: 1px solid black;
 }*/
 .head-canvas {
-  background: url('../images/background.jpg') no-repeat;
+  background: url('../images/background2.png') no-repeat;
   background-size: cover;
 
   width: 100%;
-  min-height: 500px;  
+  min-height:38em;  
 }
 .search {
-width:23em;
+width:50%;
 }
 /*body{
     background-color: #525252;
@@ -54,7 +56,6 @@ width:23em;
  border-color:red; 
 }
 
-
 .members-canvas {
 display: inline-block;
  }
@@ -74,10 +75,27 @@ display: inline-block;
   width:30%;
  }*/
 
+
+.canvas {
+  margin: 10em auto;
+  text-align: center;
+
+}
+.text{
+  color:rgba(0,0,5,.8);
+  line-height:2em;
+}
+.lg {
+  font-size: 2.5em;
+}
+.sm{
+  font-size: 1.3em;
+}
  .gallery {
   margin : 0;
   padding:0;
   list-style-type: none;
+  display: block;
  }
 
  .gallery li {
@@ -90,8 +108,10 @@ display: inline-block;
 
 .grid {
   min-height: 20em;
+  /*width: inherit;*/
   margin: 0 auto;
   text-align:center;
+  border-left: 1px dashed #f9f9f9;
 }
 
 ul.social-buttons {
@@ -100,8 +120,8 @@ ul.social-buttons {
 
 ul.social-buttons li a {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 5em;
+    height: 5em;
     border-radius: 100%;
     font-size: 20px;
     line-height: 40px;
@@ -113,12 +133,13 @@ ul.social-buttons li a {
     transition: all .3s;
     margin: 0 auto;
     text-align: center;
+    font-size: 50%;
 }
 
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-    background-color: #fed136;
+    background-color: lightblue;
 }
 
 .portfolio-item {
@@ -126,4 +147,27 @@ ul.social-buttons li a:active {
 }
 .row {
   display: inline-block;
+}
+.jumbotron {
+  margin: 0 auto;
+}
+.mid {
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+
+@media screen and (max-width: 480px) {
+.gallery {
+  display: inline-block;
+}
+.gallery li {
+  display: block;
+  border: 1px solid green;
+}
+
+body {
+  color: green;
+}
 }

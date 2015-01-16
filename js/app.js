@@ -6,16 +6,20 @@ yearbookAPP.config(['$routeProvider', function($routeProvider){
   when('/home', {
     templateUrl:'/partials/home.html',
     controller: 'homeCtrl'
-  }).
-  when('/form', {
-    templateUrl: 'partials/form.html',
+  })
+  .when('/repos', {
+    templateUrl: '/partials/repository.html',
+    controller: 'homeCtrl'
+  })
+  .when('/form', {
+    templateUrl: '/partials/form.html',
     controller : 'formController'
-  }).
-  when('/:username', {
-    templateUrl: 'partials/member.html',
+  })
+  .when('/:username', {
+    templateUrl: '/partials/member.html',
     controller: 'memberCtrl'
-  }).
-  otherwise({
+  })
+  .otherwise({
     redirectTo: '/home'
   });
 

@@ -1,10 +1,9 @@
-<div class='container' ng-repeat="member in member">
+<div class='container-fluid' ng-repeat="member in member">
  <div class= 'row'> 
-   <div class= 'col-md-8'> 
-  <p>VIEW IMAGES</p>
+  <div class= '.col-xs-6 .col-sm-4'> 
   <img ng-src="{{ member.avatar }}" >
   </div> 
-  <div class=' col-md-4'> 
+  <div class='.col-xs-6 .col-sm-4'> 
      <p>{{member.firstname}}</p>
      <p>Works at : {{member.organisation}}</p>
      <p>Profession: {{member.occupation}}</p>
@@ -15,12 +14,10 @@
      <p ng-repeat="number in member.mobile">Mobile: {{number}}</p>
      <button class="btn btn-warning">hhh</button>
   </div> 
-
-  
   </div> 
 </div>
 
-
+<!-- 
     <section id="team" class="bg-light-gray">
         <div class="container">
             <div class="row">
@@ -47,4 +44,4 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
