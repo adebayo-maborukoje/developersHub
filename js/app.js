@@ -1,7 +1,8 @@
 var yearbookAPP = angular.module('yearbookAPP', ['ngRoute']);
 
 
-yearbookAPP.config(['$routeProvider', function($routeProvider){  
+yearbookAPP.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){ 
+  $locationProvider.html5Mode(true);
   $routeProvider.
   when('/home', {
     templateUrl:'/partials/home.html',
