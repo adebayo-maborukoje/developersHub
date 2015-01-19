@@ -9,6 +9,7 @@ yearbookAPP.controller('homeCtrl', function ($scope, $http){
 yearbookAPP.controller('reposCtrl', function ($scope, $http){
     $http.get(urlBase).success(function(data){
        $scope.lists = data;
+        // $localStorage.memberData = $scope.lists;
         console.log($scope.lists);
       });
 });
@@ -23,7 +24,7 @@ yearbookAPP.controller('formController', function ($scope, $http, $location){
 
       }).success(function(){
           console.log(newUser)
-          $scope.report="CREATED SUCCESSFULLY";
+          $scope.report="Created Successfully click the repo to view";
           console.log("got here");
       }).error(function (err){
         $scope.report ="Error Processing your Form";
@@ -46,28 +47,6 @@ yearbookAPP.controller('memberCtrl', function ($scope, $http, $routeParams, $loc
      }
   });
 });
-
-// yearbookAPP.controller('editCtrl', function ($scope, $http, $location, $routeParams){
-//    var query = $scope.username;
-//    var url = urlBase+query;
-//    $http.get(url).success(function(data){
-//        $scope.userCreate = data;
-//         console.log($scope.userCreate);
-//     });
-
-//   $scope.submit = function (editedUser){
-//     $http({
-//       method: 'PUT',
-//       url: url,
-//       data: $.param(editeduser),
-//       header: {'Content-Type': 'application/x-www-form-urlencoded'}
-//       }).success(function(user){
-//        $location.url('/:username');
-//       }).error(function(){
-//         $scope.report = "ERROR EDITING PAGE";
-//     });
-//   }
-// });
 
 yearbookAPP.controller('loginCtrl', function($scope, $http, $routeParams, $location){
   $scope.submit = function (){

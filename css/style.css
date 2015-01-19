@@ -157,11 +157,6 @@ ul.social-buttons li a:active {
 }
 
 
-
-
-
-
-
 @media screen and (max-width: 480px) {
   .gallery {
     display: inline-block;
@@ -271,4 +266,8 @@ a:hover{
   text-align: center;
   margin :0 auto;
   padding: 0;
+}
+
+.fa-repo{
+  font-size: 200%
 }

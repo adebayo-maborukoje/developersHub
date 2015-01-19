@@ -15,18 +15,14 @@ yearbookAPP.config(['$routeProvider', function($routeProvider){
     templateUrl: '/partials/form.html',
     controller : 'formController'
   })
-  .when('/login', {
-    templateUrl: '/partials/login.html',
-    controller:'loginCtrl'
-  })
+  // .when('/login', {
+  //   templateUrl: '/partials/login.html',
+  //   controller:'loginCtrl'
+  // })
   .when('/:username', {
     templateUrl: '/partials/member.html',
     controller: 'memberCtrl'
   })
-  // .when('/:username/edit', {
-  //   templateUrl: '/partials/edit.html',
-  //   controller: 'editCtrl'
-  // })
   .otherwise({
     redirectTo: '/home'
   });
