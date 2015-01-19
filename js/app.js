@@ -9,18 +9,27 @@ yearbookAPP.config(['$routeProvider', function($routeProvider){
   })
   .when('/repos', {
     templateUrl: '/partials/repository.html',
-    controller: 'homeCtrl'
+    controller: 'reposCtrl'
   })
   .when('/form', {
     templateUrl: '/partials/form.html',
     controller : 'formController'
   })
+  .when('/login', {
+    templateUrl: '/partials/login.html',
+    controller:'loginCtrl'
+  })
   .when('/:username', {
     templateUrl: '/partials/member.html',
     controller: 'memberCtrl'
   })
+  // .when('/:username/edit', {
+  //   templateUrl: '/partials/edit.html',
+  //   controller: 'editCtrl'
+  // })
   .otherwise({
     redirectTo: '/home'
   });
 
 }]);
+
