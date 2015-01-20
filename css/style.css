@@ -292,3 +292,8 @@ a:hover
 {
   font-size: 200%
   }
+
+li 
+{
+  list-style-type: none;
+  }
