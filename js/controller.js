@@ -1,5 +1,5 @@
 var yearbookAPP = angular.module('yearbookAPP');
-var urlBase =  'https://andela-yearbook.herokuapp.com/yearBook/';
+var urlBase =  'https://developershubapi.herokuapp.com/yearBook/';
 
 yearbookAPP.controller('homeCtrl', function ($scope, $http){
  console.log("HOME CONTROLLER");

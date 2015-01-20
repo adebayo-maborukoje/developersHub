@@ -29,4 +29,3 @@ yearbookAPP.config(['$routeProvider', '$locationProvider', function($routeProvid
   });
 
 }]);
-
