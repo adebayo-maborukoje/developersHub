@@ -32,7 +32,8 @@ img {
   background-size: cover;
   width: 100%;
   min-height:50em;
-  height: 50em;  
+  height: 50em; 
+  border: 1px solid black; 
 }
 .search {
 width:50%;
