@@ -31,8 +31,8 @@ img {
   background: url('../images/background2.png') no-repeat;
   background-size: cover;
   width: 100%;
-  min-height:23em;
-  height: 23em;  
+  min-height:50em;
+  height: 50em;  
 }
 .search {
 width:50%;
