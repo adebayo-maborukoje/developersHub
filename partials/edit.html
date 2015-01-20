@@ -1,27 +1,12 @@
 <div class="container" >
-<div class="center">
-    <p class="text sm">ANDELA DEVELOPERS</p>
-    <p class="text sm">Thoroughly Furnished For Great Productivity and Awesomeness</p>
-    <div class="center">
-      <div class="col-xs-12 col-sm-3 ">
-          <a href=".#/home"><button class="btn btn-info btn-block">HOME</button></a>
-      </div>
-      <div class="col-xs-12 col-sm-3 ">
-          <a href=".#/repos"><button class="btn btn-info btn-block"> REPOSITORY </button></a>
-      </div>
-      <div class="col-xs-12 col-sm-3 ">
-        <a href=".#/form"><button class="btn btn-info btn-block">REGISTER </button></a>
-      </div>
-    </div>
-  </div>
   <div class="row">
   <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title"> REGISTRATION PAGE</h3>
+        <h3 class="panel-title"> EDIT YOUR PROFILE HERE</h3>
       </div>
       <div class="panel-body">
-      <p class="center input-sm">{{report}}</p>
+      <p>{{report}}</p>
       <!-- enctype="multi/part form-data" novalidate-->
         <form role="form" name="enrolmentForm" id="enrolmentForm" ng-submit="submit(userCreate)" >
           <div class="row">
@@ -42,12 +27,12 @@
           <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-6">
               <div class="form-group">
-                <input type="text" ng-model="userCreate.username" name="username" id="username" class="form-control input-sm" placeholder="username" required>
+                <input type="text" ng-model="userCreate.username" name="username" id="username" class="form-control input-sm" placeholder="username" >
               </div>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6">
               <div class="form-group">
-                <input type="password" ng-model="userCreate.password" name="password" id="password" class="form-control input-sm" placeholder="password" required>
+                <input type="text" ng-model="userCreate.nickname" name="nickname" id="nickname" class="form-control input-sm" placeholder="Nickname">
               </div>
             </div>
           </div>
@@ -73,17 +58,9 @@
                 </select>
               </div>
             </div>
-             <div class="col-xs-6 col-sm-6 col-md-6">
-              <div class="form-group">
-                <input type="text" ng-model="userCreate.nickname" name="nickname" id="nickname" class="form-control input-sm" placeholder="Nickname">
-              </div>
-            </div>
           </div>
             <div class="form-group">
               <input type="text" ng-model="userCreate.mobile" name="mobile" id="mobile" class="form-control input-sm" placeholder="Mobile Numbers e.g +23480xxxx, 234-01XXXX">
-            </div>
-            <div class="form-group">
-                <input type="text" ng-model="userCreate.specialization" name="specialization" id="specialization" class="form-control input-sm" placeholder="specialization">
             </div>
             <div class="form-group">
                 <input type="text" ng-model="userCreate.interest" name="hobbies" id="hobies" class="form-control input-sm" placeholder="Hobbies">
@@ -91,11 +68,8 @@
             <div class="form-group">
               <textarea type="text" ng-model="userCreate.bio" name="bio" id="bio" class="form-control input-sm" placeholder="Enter a Brief description about you"></textarea> 
             </div>
-
-            <div class="form-group input-sm">Click this <a href="http://postimage.org">Link</a> to Upload your Images and paste the link here</div>
             <div class="form-group">
-              
-              <textarea type="text" ng-model="userCreate.avatar" name="imageurl" id="imageurl" class="form-control input-sm" placeholder="ONLY LINKS ARE ALLOWED PLEASE"></textarea> 
+              <textarea type="text" ng-model="userCreate.avatar" name="imageurl" id="imageurl" class="form-control input-sm" placeholder="kindly upload a link to your picture on facebook"></textarea> 
             </div>
           <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-6">
@@ -120,7 +94,6 @@
               </div>
             </div>
           </div>    
-          <!-- <input name="file" type="file" id="file" file-model="fileToUpload" class="form-control input-sm" />-->
           <input type="submit" value="Register" class="btn btn-info btn-block"> 
 
         </form>
