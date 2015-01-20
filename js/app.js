@@ -5,15 +5,15 @@ yearbookAPP.config(['$routeProvider', '$locationProvider', function($routeProvid
   $locationProvider.html5Mode(true);
   $routeProvider.
   when('/home', {
-    templateUrl:'/partials/home.html',
+    templateUrl:'./partials/home.html',
     controller: 'homeCtrl'
   })
   .when('/repos', {
-    templateUrl: '/partials/repository.html',
+    templateUrl: './partials/repository.html',
     controller: 'reposCtrl'
   })
   .when('/form', {
-    templateUrl: '/partials/form.html',
+    templateUrl: './partials/form.html',
     controller : 'formController'
   })
   // .when('/login', {
@@ -21,7 +21,7 @@ yearbookAPP.config(['$routeProvider', '$locationProvider', function($routeProvid
   //   controller:'loginCtrl'
   // })
   .when('/:username', {
-    templateUrl: '/partials/member.html',
+    templateUrl: './partials/member.html',
     controller: 'memberCtrl'
   })
   .otherwise({
