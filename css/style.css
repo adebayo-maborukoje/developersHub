@@ -12,6 +12,10 @@ img {
   /*wdith:100%;*/
 }
 
+.mybg {
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+}
 .img-canvas {
   max-width: 13em;
   max-height: 12em;
