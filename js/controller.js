@@ -53,10 +53,11 @@ yearbookAPP.controller('memberCtrl', function ($scope, $http, $routeParams, $loc
 });
 
 yearbookAPP.controller('loginCtrl', function($scope, $http, $routeParams, $location){
+  var urlExtension =  '/login';
   $scope.submit = function (){
     $http({
       method: 'POST',
-      url: urlBase,
+      url: urlBase+urlExtension,
       data: $.param ({
         username: $scope.username,
         password: $scope.password
