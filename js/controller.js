@@ -12,6 +12,7 @@ yearbookAPP.controller('reposCtrl', function ($scope, $http){
        $scope.lists = data;
         // $localStorage.memberData = $scope.lists;
         console.log($scope.lists);
+        toastr.clear();
       });
 });
 
