@@ -42,7 +42,7 @@ yearbookAPP.controller('memberCtrl', function ($scope, $http, $routeParams, $loc
   var url = urlBase+query;
   $http.get(url).success(function(data, status){
     if (status !== 200 || data.status === 404){
-         $location.path('/home');
+         $location.path('home');
         // console.log(status, data.status)
     }else{
         console.log(status);
@@ -65,7 +65,7 @@ yearbookAPP.controller('loginCtrl', function($scope, $http, $routeParams, $locat
       header: {'Content-Type': 'application/x-www-form-urlencoded'}
     }).success(function(user){
       toastr.success('Login Successfully');
-      $location.url('/edit');
+      $location.url('edit');
     }).error(function(){
       toastr.error("Username or Password Incorrect");
       $scope.report = "USERNAME OR PASSWORD INCORRECT";
