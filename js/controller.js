@@ -52,23 +52,23 @@ yearbookAPP.controller('memberCtrl', function ($scope, $http, $routeParams, $loc
   });
 });
 
-yearbookAPP.controller('loginCtrl', function($scope, $http, $routeParams, $location){
-  var urlExtension =  'login';
-  $scope.submit = function (){
-    $http({
-      method: 'POST',
-      url: urlBase+urlExtension,
-      data: $.param ({
-        username: $scope.username,
-        password: $scope.password
-        }),
-      header: {'Content-Type': 'application/x-www-form-urlencoded'}
-    }).success(function(user){
-      toastr.success('Login Successfully');
-      $location.url('edit');
-    }).error(function(){
-      toastr.error("Username or Password Incorrect");
-      $scope.report = "USERNAME OR PASSWORD INCORRECT";
-    });
-  }
-});
+// yearbookAPP.controller('loginCtrl', function($scope, $http, $routeParams, $location){
+//   var urlExtension =  'login';
+//   $scope.submit = function (){
+//     $http({
+//       method: 'POST',
+//       url: urlBase+urlExtension,
+//       data: $.param ({
+//         username: $scope.username,
+//         password: $scope.password
+//         }),
+//       header: {'Content-Type': 'application/x-www-form-urlencoded'}
+//     }).success(function(user){
+//       toastr.success('Login Successfully');
+//       $location.url('edit');
+//     }).error(function(){
+//       toastr.error("Username or Password Incorrect");
+//       $scope.report = "USERNAME OR PASSWORD INCORRECT";
+//     });
+//   }
+// });
