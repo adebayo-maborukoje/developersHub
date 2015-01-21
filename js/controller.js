@@ -42,7 +42,7 @@ yearbookAPP.controller('memberCtrl', function ($scope, $http, $routeParams, $loc
   var url = urlBase+query;
   $http.get(url).success(function(data, status){
     if (status !== 200 || data.status === 404){
-         $location.path('home');
+         $location.path('/home');
         // console.log(status, data.status)
     }else{
         console.log(status);
