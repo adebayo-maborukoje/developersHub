@@ -31,7 +31,7 @@ yearbookAPP.controller('formController', function ($scope, $http, $location){
           console.log("got here");
       }).error(function (err){
         // $scope.report ="Error Processing your Form";
-        toastr.error('Error Processing your Form');
+        toastr.error(err.errors);
       });
     } 
 });
