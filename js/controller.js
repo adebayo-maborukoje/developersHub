@@ -23,14 +23,13 @@ yearbookAPP.controller('formController', function ($scope, $http, $location){
           url: urlBase,
           data : $.param(newUser),
           headers : {'Content-Type': 'application/x-www-form-urlencoded'}
-
       }).success(function(){
           console.log(newUser)
           // $scope.report="Created Successfully click the repo to view";
           toastr.success('Created Successfully click the repo to view');
           console.log("got here");
       }).error(function (err){
-        // $scope.report ="Error Processing your Form";
+         //$scope.report ="";
         console.log(err.message);
         toastr.error(err.message);
       });
