@@ -7,6 +7,7 @@ yearbookAPP.controller('homeCtrl', function ($scope, $http){
 });
 
 yearbookAPP.controller('reposCtrl', function ($scope, $http){
+  toaster.success('loading Repository... please wait');
     $http.get(urlBase).success(function(data){
        $scope.lists = data;
         // $localStorage.memberData = $scope.lists;
@@ -61,8 +62,10 @@ yearbookAPP.controller('loginCtrl', function($scope, $http, $routeParams, $locat
         }),
       header: {'Content-Type': 'application/x-www-form-urlencoded'}
     }).success(function(user){
-      $location.url('/edit')
+      toastr.success('Login Successfully');
+      $location.url('/edit');
     }).error(function(){
+      toastr.error("Username or Password Incorrect");
       $scope.report = "USERNAME OR PASSWORD INCORRECT";
     });
   }
