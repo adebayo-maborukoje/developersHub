@@ -17,7 +17,7 @@ yearbookAPP.config(['$routeProvider', '$locationProvider', function($routeProvid
     controller : 'formController'
   })
   .when('/login', {
-    templateUrl: '/partials/login.html',
+    templateUrl: './partials/login.html',
     controller:'loginCtrl'
   })
   .when('/:username', {
