@@ -7,7 +7,7 @@ yearbookAPP.controller('homeCtrl', function ($scope, $http){
 });
 
 yearbookAPP.controller('reposCtrl', function ($scope, $http){
-  toaster.success('loading Repository... please wait');
+  toastr.success('loading Repository... please wait');
     $http.get(urlBase).success(function(data){
        $scope.lists = data;
         // $localStorage.memberData = $scope.lists;
